@@ -16,5 +16,6 @@ namespace Sale_App
         {
             InitializeComponent();
         }
+
     }
 }

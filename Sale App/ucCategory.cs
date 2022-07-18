@@ -50,6 +50,7 @@ namespace Sale_App
                 int id = (int)dataGridView1.SelectedRows[0].Cells["Id"].Value;
                 CategoryRepository repo = new CategoryRepository();
                 repo.Delete(id);
+                loadData();
             }
             else
             {

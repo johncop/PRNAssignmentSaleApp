@@ -27,6 +27,9 @@ namespace Sale_App
                 CategoryName = txtName.Text,
                 Status = 1
             };
+            repo.Add(cat);
+            this.Close();
+
         }
 
         private void FormAddCategory_FormClosed(object sender, EventArgs e)
