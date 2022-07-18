@@ -78,8 +78,10 @@ namespace Sale_App
                     Status = 1
                 };
                 formUpdate.LoadCategory(cate);
+                //formUpdate.Update(cate);
             }
             formUpdate.ShowDialog();
+            
             loadData();
         }
 

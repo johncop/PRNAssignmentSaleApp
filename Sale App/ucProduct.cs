@@ -45,5 +45,12 @@ namespace Sale_App
             }
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            FormAddProduct formAddPro = new FormAddProduct();
+            formAddPro.ShowDialog();
+            //formAddCate.FormClosed += FormAddCategory_FormClosed;
+            loadData();
+        }
     }
 }

@@ -88,3 +88,5 @@ E:\Visual studio\Bai tap\PRNAssignmentSaleApp\Sale App\obj\Debug\net5.0-windows\
 E:\Visual studio\Bai tap\PRNAssignmentSaleApp\Sale App\obj\Debug\net5.0-windows\ref\Sale App.dll
 E:\Visual studio\Bai tap\PRNAssignmentSaleApp\Sale App\obj\Debug\net5.0-windows\Sale App.pdb
 E:\Visual studio\Bai tap\PRNAssignmentSaleApp\Sale App\obj\Debug\net5.0-windows\Sale App.genruntimeconfig.cache
+E:\Visual studio\Bai tap\PRNAssignmentSaleApp\Sale App\obj\Debug\net5.0-windows\Sale_App.FormAddProduct.resources
+E:\Visual studio\Bai tap\PRNAssignmentSaleApp\Sale App\obj\Debug\net5.0-windows\Sale_App.FormAddOrder.resources
