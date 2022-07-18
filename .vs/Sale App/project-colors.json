@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4cc5e5b2-c118-4a0c-a794-7170ff07b58a": {
+      "ProjectGuid": "4cc5e5b2-c118-4a0c-a794-7170ff07b58a",
+      "DisplayName": "Sale App",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
