@@ -19,6 +19,9 @@
     <Compile Update="ucOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ucOrderDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="ucProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
