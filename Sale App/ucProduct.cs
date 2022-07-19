@@ -25,6 +25,32 @@ namespace Sale_App
             var pro = repo.Get();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = pro;
+            
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure to delete this product?",
+               "Delete confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
+
+            {
+                int id = (int)dataGridView1.SelectedRows[0].Cells["Id"].Value;
+                ProductRepository pro = new ProductRepository();
+                pro.Delete(id);
+                loadData();
+            }
+            else
+            {
+                MessageBox.Show("Please select product to delete");
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            FormAddProduct formAddPro = new FormAddProduct();
+            formAddPro.ShowDialog();
+            //formAddCate.FormClosed += FormAddCategory_FormClosed;
+            loadData();
         }
     }
 }
