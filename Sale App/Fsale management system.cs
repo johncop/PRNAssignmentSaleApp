@@ -15,8 +15,8 @@ namespace Sale_App
         public Form1()
         {
             InitializeComponent();
-            //this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.None;
+            this.TopMost = true;
+            //this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             this.Text = "Fsale management system";
         }

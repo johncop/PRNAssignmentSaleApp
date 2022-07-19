@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "36QSLovayoDikNNZwDK08yokJBfk+/K5hxERVzwmNn2RPDxEvZIpgzKrWedtfTuZYsnJUOz9m6HxDU6nfXi7Sw==",
+  "dgSpecHash": "mp9NE+a160PeVS0IZfVvmb+g7jkinRZtBhzT6YUwo5fAqOrKp7Q8E80fT2mMaWC4JIXXUVOgGHm+QsQzcVhlhw==",
   "success": true,
-  "projectFilePath": "D:\\Project\\C dharp\\Sale App\\Sale App\\Sale App.csproj",
+  "projectFilePath": "D:\\Project\\C dharp\\PRNAssignmentSaleApp\\Sale App\\Sale App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
