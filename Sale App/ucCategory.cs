@@ -17,7 +17,7 @@ namespace Sale_App
         public ucCategory()
         {
             InitializeComponent();
-            loadData();
+            loadData();           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -33,13 +33,7 @@ namespace Sale_App
             dataGridView1.DataSource = category;
         }
 
-
-
-
-
-
-
-
+        
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -80,13 +74,49 @@ namespace Sale_App
                 formUpdate.LoadCategory(cate);
                 //formUpdate.Update(cate);
             }
-            formUpdate.ShowDialog();
-            
+            formUpdate.ShowDialog();        
             loadData();
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Length == 0)
+            {
+                MessageBox.Show("Search is empty");
+                return;
+            }
+            List<Category> categories = new List<Category>();
+            //MessageBox.Show(txtSearch.Text);
+            //string name = txtSearch.Text;
+           // txtSearch.Text = name;
+            CategoryRepository repo = new CategoryRepository();
+            Category cate = new Category();
+            categories = repo.GetName(txtSearch.Text);
+            //cate = repo.GetByName(name);
+            dataGridView1.DataSource = categories;
+        }
+
+        private void loadSearchData()
+        {
+            
+        }
 
 
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
 
+            /* if(e.KeyChar == (char)13)
+             {
+                 CategoryRepository repo = new CategoryRepository();
+                 var category = repo.Get();
+                 dataGridView1.AutoGenerateColumns = false;
+                 dataGridView1.DataSource = category;*/
+
+            /*DataTable dt = new DataTable();
+            DataView dv = dt.DefaultView;
+            dv.RowFilter = string.Format("[CategoryName] like '%" + txtSearch.Text + "%'");
+            dataGridView1.DataSource = dv.ToTable();*/
+        }
     }
-}
+    }
+

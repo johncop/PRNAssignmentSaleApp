@@ -29,7 +29,6 @@ namespace Sale_App
             };
             repo.Add(cat);
             this.Close();
-
         }
 
         private void FormAddCategory_FormClosed(object sender, EventArgs e)

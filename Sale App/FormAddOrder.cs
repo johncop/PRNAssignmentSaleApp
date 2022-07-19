@@ -21,17 +21,35 @@ namespace Sale_App
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            OrderRepository repo = new OrderRepository();
-            var or = new Order()
+            if (checkValid())
             {
-                CustomerName = txtCusName.Text,
-                Address = txtAddress.Text,
-                Price = int.Parse(txtPrice.Text),
-                OrderDate = DateTime.Now,
-                Status = int.Parse(txtStatus.Text),
-            };
-            repo.createOrder(or);
-            this.Close();
+                OrderRepository repo = new OrderRepository();
+                var or = new Order()
+                {
+                    CustomerName = txtCusName.Text,
+                    Address = txtAddress.Text,
+                    Price = int.Parse(txtPrice.Text),
+                    OrderDate = DateTime.Now,
+                    Status = int.Parse(txtStatus.Text),
+                };
+                repo.createOrder(or);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Your input is not valid!");
+            }
+            
+        }
+
+        private bool checkValid()
+        {
+            if (int.Parse(txtPrice.Text) < 0)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

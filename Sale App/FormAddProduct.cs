@@ -27,19 +27,36 @@ namespace Sale_App
             cateComboBox.ValueMember = "CategoryId";
             cateComboBox.DataSource = cate.;
         }*/
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            ProductRepository repo = new ProductRepository();
-            var pro = new Product()
+            if (checkValid()) 
             {
-                Name = txtProName.Text,
-                Price = double.Parse(txtProPrice.Text),
-                CreateDate = DateTime.Now,
-                Status = int.Parse(txtProStatus.Text),
-                CategoryId = int.Parse(txtCateId.Text)
-            };
-            repo.Add(pro);
-            this.Close();
+                ProductRepository repo = new ProductRepository();
+                var pro = new Product()
+                {
+                    Name = txtProName.Text,
+                    Price = double.Parse(txtProPrice.Text),
+                    CreateDate = DateTime.Now,
+                    Status = int.Parse(txtProStatus.Text),
+                    CategoryId = int.Parse(txtCateId.Text)
+                };
+                repo.Add(pro);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Your input is not valid!");
+            }          
+        }
+
+        private bool checkValid()
+        {
+            if(int.Parse(txtProPrice.Text) < 0)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
